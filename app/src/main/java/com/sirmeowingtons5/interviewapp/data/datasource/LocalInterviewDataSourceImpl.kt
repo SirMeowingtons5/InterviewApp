@@ -2,8 +2,9 @@ package com.sirmeowingtons5.interviewapp.data.datasource
 
 import com.sirmeowingtons5.interviewapp.domain.entity.common.ID
 import com.sirmeowingtons5.interviewapp.domain.entity.interview.Interview
+import javax.inject.Inject
 
-class InterviewLocalDataSource : InterviewDataSource {
+class LocalInterviewDataSourceImpl @Inject constructor() : InterviewDataSource {
 
     private val interviews = HashMap<ID, Interview>()
 
