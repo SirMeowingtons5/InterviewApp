@@ -12,6 +12,9 @@ class InterviewRepositoryImpl(
     override fun get(id: ID): Interview =
         dataSource.getById(id)
 
+    override fun getAll(): List<Interview> =
+        dataSource.getAll()
+
     override fun save(interview: Interview) {
         dataSource.save(interview)
     }

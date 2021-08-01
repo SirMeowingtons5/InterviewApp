@@ -10,6 +10,9 @@ class InterviewLocalDataSource : InterviewDataSource {
     override fun getById(id: ID): Interview =
         requireNotNull(interviews[id])
 
+    override fun getAll(): List<Interview> =
+        interviews.values.toList()
+
     override fun save(interview: Interview) {
         interviews[interview.id] = interview
     }
