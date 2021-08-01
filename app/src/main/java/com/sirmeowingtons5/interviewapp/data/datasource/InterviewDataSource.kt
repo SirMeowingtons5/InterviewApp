@@ -7,5 +7,7 @@ interface InterviewDataSource {
 
     fun getById(id: ID): Interview
 
+    fun getAll(): List<Interview>
+
     fun save(interview: Interview)
 }

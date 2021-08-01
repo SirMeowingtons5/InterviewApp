@@ -7,5 +7,7 @@ interface InterviewRepository {
 
     fun get(id: ID): Interview
 
+    fun getAll(): List<Interview>
+
     fun save(interview: Interview)
 }
