@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import com.sirmeowingtons5.interviewapp.ui.screen.interview.list.InterviewListRootScreen
+import com.sirmeowingtons5.interviewapp.ui.screen.interview.list.InterviewListScreen
 import com.sirmeowingtons5.interviewapp.ui.theme.InterviewAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
             InterviewAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    InterviewListRootScreen()
+                    InterviewListScreen()
                 }
             }
         }

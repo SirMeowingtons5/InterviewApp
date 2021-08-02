@@ -1,7 +1,10 @@
 package com.sirmeowingtons5.interviewapp.ui.screen.interview.list.component
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
@@ -17,7 +20,7 @@ fun InterviewRow(
     interview: Interview,
     onClick: () -> Unit
 ) {
-    InterviewRowComponent(
+    InterviewRowContent(
         title = interview.title,
         description = interview.description,
         interviewee = "${interview.interviewee.firstName} ${interview.interviewee.lastName}",
@@ -27,7 +30,7 @@ fun InterviewRow(
 }
 
 @Composable
-fun InterviewRowComponent(
+private fun InterviewRowContent(
     title: String,
     description: String,
     interviewee: String,
@@ -57,7 +60,7 @@ fun InterviewRowComponent(
 }
 
 @Composable
-fun InterviewStateComponent(state: InterviewState) {
+private fun InterviewStateComponent(state: InterviewState) {
     val text = when (state) {
         InterviewState.NOT_STARTED -> "Not started"
         InterviewState.IN_PROCESS -> "In process"
