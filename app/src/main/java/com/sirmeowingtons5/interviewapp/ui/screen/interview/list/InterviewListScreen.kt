@@ -15,14 +15,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.sirmeowingtons5.interviewapp.domain.entity.interview.Interview
 import com.sirmeowingtons5.interviewapp.presentation.interview.list.InterviewListViewModel
 import com.sirmeowingtons5.interviewapp.ui.screen.interview.list.component.InterviewRow
 import com.sirmeowingtons5.interviewapp.presentation.interview.list.InterviewListScreenState as ScreenState
 
 @Composable
-fun InterviewListScreen(viewModel: InterviewListViewModel = viewModel()) {
+fun InterviewListScreen(viewModel: InterviewListViewModel = hiltViewModel()) {
     val state: ScreenState by viewModel.state.collectAsState()
     viewModel.load()
 
